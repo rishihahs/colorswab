@@ -31,4 +31,5 @@ end
 
 group :production, :staging do
   gem 'therubyracer', '~> 0.9.3.beta1'
+  gem 'pg'
 end
