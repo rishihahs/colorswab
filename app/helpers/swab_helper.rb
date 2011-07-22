@@ -1,0 +1,2 @@
+module SwabHelper
+end

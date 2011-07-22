@@ -1,4 +1,7 @@
 Colorswab::Application.routes.draw do
+  
+  root :to => "swab#index", :as => 'swab'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
