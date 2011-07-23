@@ -1,4 +1,8 @@
 Colorswab::Application.routes.draw do
+  get "swab/index"
+  get "swab/colors"
+  
+  match 'swab/colors' => 'swab#colors', :as => 'colors'
   
   root :to => "swab#index", :as => 'swab'
   
