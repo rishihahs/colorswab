@@ -1,4 +1,10 @@
-<% for color in @colors %>
-  <div style="width:100px;height:100px;background-color:<%= color.html %>"></div>
-  <p><%= color.html %></p>
-<% end %>
+<%= render 'form', :color => @color %>
+    
+<div id="colors">
+  <% for color in @colors %>
+    <div class="color" style="background-color:<%= color %>"><p><%= color %></p></div>
+  <% end %>
+  <br style="clear: left;" />
+</div>
+    
+<p class="instruct">Click on the colors to view their swabs</p>

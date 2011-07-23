@@ -1,0 +1,8 @@
+<%= form_tag(colors_path) do %>
+  <%= label_tag :color, 'Hex or CSS color:' %>
+  <% if color.blank? %>
+    <%= text_field_tag :color, '#fff' %>
+  <% else %>
+    <%= text_field_tag :color, color, :spellcheck => false %>
+  <% end %>
+<% end %>
