@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Colorswab</title>
+  <title>ColorSwab</title>
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  <div id="logo">
+    <%= image_tag('logo.png') %>
+  </div>
 
-<%= yield %>
+  <div id="content">
+    <%= yield %>
+  </div>
+  
+  <div id="footer">
+    <p>Copyright &copy; 2011, Rishi Shah.</p>
+  </div>
 
 </body>
 </html>
