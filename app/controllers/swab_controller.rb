@@ -1,6 +1,6 @@
 class SwabController < ApplicationController
   def index
-    if session[:color] or session[:colors]
+    if !session[:color].blank? or !session[:colors].blank?
       @color = session[:color]
       @colors = session[:colors]
       session[:color] = nil
