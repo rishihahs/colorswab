@@ -1,10 +1,7 @@
 <%= render 'form', :color => @color %>
-    
-<div id="colors">
-  <% for color in @colors %>
-    <div class="color" style="background-color:<%= color %>"><p><%= color %></p></div>
-  <% end %>
-  <br style="clear: left;" />
+
+<div id="colors">    
+  <%= render 'colors', :colors => @colors %>
 </div>
-    
+
 <p class="instruct">Click on the colors to view their swabs</p>

@@ -1,0 +1,6 @@
+$(function() {
+  
+  // Render new swabs
+  $('#colors').html("<%= escape_javascript(render 'colors', :colors => @colors).html_safe %>");
+  
+});

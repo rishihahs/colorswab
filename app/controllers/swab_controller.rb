@@ -3,6 +3,8 @@ class SwabController < ApplicationController
     if session[:color] or session[:colors]
       @color = session[:color]
       @colors = session[:colors]
+      session[:color] = nil
+      session[:colors] = nil
     else
       swabs("#fff")
       @color = @color.html
@@ -24,7 +26,11 @@ class SwabController < ApplicationController
   private
   
     def swabs(color)
-      @color = Color::RGB.from_html(color)
+      begin
+        @color = Color::RGB.from_html(color)
+      rescue ArgumentError
+        @color = Color::RGB.from_html("#fff")
+      end
       @colors = []
 
       4.times do |n|
