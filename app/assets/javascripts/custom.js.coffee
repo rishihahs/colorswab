@@ -7,9 +7,10 @@ $.fn.mColorPicker.init.showLogo = false
 $ ->
   
   # Switch swabs on click of color
-  $("div.color").live "click", ->
-    $("input#color").val $("p", this).text()
-    $("form").submit()
+  $("div.color").live "click", (e) ->
+    if (!$(e.target).is('p'))
+      $("input#color").val $("p", this).text()
+      $("form").submit()
   
   # Add jQuery ColorPicker to color field
   $("input#color").mColorPicker imageFolder: "/assets/mcolorpicker/"
