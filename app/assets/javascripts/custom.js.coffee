@@ -10,6 +10,8 @@ $ ->
   $("div.color").live "click", (e) ->
     if (!$(e.target).is('p'))
       $("input#color").val $("p", this).text()
+      $("input#color").css 'background-color', $("p", this).text()
+      $("input#color").css 'color', $.fn.mColorPicker.textColor($("input#color").css('background-color'))
       $("form").submit()
   
   # Add jQuery ColorPicker to color field
