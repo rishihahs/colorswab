@@ -1,16 +1,18 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc4'
+gem 'rails', '3.1.0.rc5'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'pg'
 
 # Asset template engines
-gem 'sass-rails', "~> 3.1.0.rc"
-gem 'coffee-script'
-gem 'uglifier'
+group :assets do
+  gem 'sass-rails', "~> 3.1.0.rc"
+  gem 'coffee-script'
+  gem 'uglifier'
+end
 
 gem 'jquery-rails'
 gem 'color'
@@ -27,9 +29,4 @@ gem 'color'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
-end
-
-group :production, :staging do
-  gem 'therubyracer', '~> 0.9.3.beta1'
-  gem 'pg'
 end
